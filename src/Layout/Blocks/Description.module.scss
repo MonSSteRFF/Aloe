@@ -1,0 +1,71 @@
+@import '../../assets/styles/global';
+@import '../../assets/styles/typography';
+@import '../../assets/styles/media';
+
+.section{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--descriptionBg);
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  padding: 177px 0 170px 0;
+  position: relative;
+  z-index: 1;
+  @include media(l){
+    padding: 100px 0 60px 0;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+    @extend %container;
+    @include media(l){
+      flex-direction: column;
+    }
+    .title{
+      color: var(--main);
+      @extend %sui_reg_100_105;
+      max-width: 600px;
+      margin-bottom: 40px;
+      @include media(xl){
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+    }
+    .desc{
+      color: var(--main);
+      @extend %sui_reg_20_30;
+      max-width: 520px;
+      text-indent: var(--textIndend);
+      @include media(xl){
+        max-width: 100%;
+      }
+    }
+  }
+  .circleImage{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    user-select: none;
+  }
+  .logotype{
+    margin-left: 100px;
+    background: var(--prim);
+    border-radius: 160px;
+    width: 305px;
+    height: 305px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 318px;
+    right: 388px;
+    user-select: none;
+  }
+}

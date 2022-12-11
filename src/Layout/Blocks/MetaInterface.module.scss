@@ -1,0 +1,16 @@
+@import "../../Assets/styles/media";
+
+.section{
+  background: linear-gradient(180deg, #303341 0%, #16171A 36.84%);
+  border-radius: var(--sectionBR);
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  .iframe{
+    height: 950px;
+    width: 100%;
+    @include media(m){
+      height: 660px;
+    }
+  }
+}
